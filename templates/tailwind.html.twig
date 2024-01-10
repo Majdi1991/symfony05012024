@@ -1,0 +1,12 @@
+<html>
+	<head>
+		<title>Exemple Twig</title>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+	</head>
+	<body>
+		<h1 class="bg-blue-700">Article</h1>
+		<p>{{ id }}</p>
+	</body>
+</html>

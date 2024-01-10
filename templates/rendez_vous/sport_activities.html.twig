@@ -1,0 +1,12 @@
+{# templates/rendez_vous/sport_activities.html.twig #}
+
+<h1>Activités Sportives Disponibles</h1>
+
+<ul>
+    {% for activity in sportActivities %}
+        <li>
+            {{ activity.name }} - {{ activity.description }}
+            <a href="{{ path('make_reservation', {'activityId': activity.id}) }}">Réserver</a>
+        </li>
+    {% endfor %}
+</ul>

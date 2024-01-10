@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inscription</title>
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+</head>
+<body>
+  
+ <h1 class="text-4xl font-bold mb-8">Inscription</h1>
+
+{{ form_start(registrationForm) }}
+    {{ form_row(registrationForm.name, {'attr': {'class': 'border p-2 mb-2'}}) }}
+    {{ form_row(registrationForm.email, {'attr': {'class': 'border p-2 mb-2'}}) }}
+    {{ form_row(registrationForm.password, {'attr': {'class': 'border p-2 mb-2'}}) }}
+    <button type="submit" class="bg-red-500 text-white px-4 py-2">S'inscrire</button>
+{{ form_end(registrationForm) }}
+<button>
+    <a href="{{ path('user_delete' , {
+    'id' : user.id,
+    'method' : 'DELETE'
+    })}}">Supprimer</a>
+</button>
+
+
+</body>
+</html>

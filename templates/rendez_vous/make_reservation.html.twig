@@ -1,0 +1,10 @@
+{# templates/rendez_vous/make_reservation.html.twig #}
+
+<h1>Réserver une Activité Sportive</h1>
+
+{{ form_start(form) }}
+    {{ form_row(form.activity) }}
+    {{ form_row(form.reservationDateTime) }}
+    {# Ajoutez d'autres champs si nécessaire #}
+    <button type="submit">Réserver</button>
+{{ form_end(form) }}

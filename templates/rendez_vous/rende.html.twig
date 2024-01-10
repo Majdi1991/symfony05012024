@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choix du Sport</title>
+
+</head>
+<body>
+
+    <h1>{{ message }}</h1>
+
+    <form action="{{ path('rendez_vous') }}" method="post">
+        <label for="sport">Choisissez un sport :</label>
+        <select id="sport" name="sport">
+            {% for rdv in rendezVous %}
+                <option value="{{ rdv.activite }}">{{ rdv.activite }} - {{ rdv.date }} à {{ rdv.heure }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Réserver</button>
+    </form>
+
+</body>
+</html>

@@ -3,3 +3,15 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+rendez_vous:
+    path: /rendez-vous
+    controller: App\Controller\RendezVousController::showRendezVous
+
+
+app_register:
+    path: /register
+    controller: App\Controller\RegistrationController::register
+
+registration_confirm:
+    path: /register/confirm
+    controller: App\Controller\RegistrationController::confirm
